@@ -5,9 +5,6 @@ jobs:
   fuzz:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    defaults:
-      run:
-        working-directory: ./scripts
     steps:
       - name: build image
         run: ./build.sh
