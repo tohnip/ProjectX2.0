@@ -13,8 +13,8 @@ FUZZ_TEST_SETUP() {
 FUZZ_TEST(const uint8_t *data, size_t size)
 {
   FuzzedDataProvider fuzzed_data(data, size);
-  float value1 = fuzzed_data.ConsumeIntegral<float>();
-  float value2 = fuzzed_data.ConsumeIntegral<float>();
+  float value1 = fuzzed_data.ConsumeIntegral<int>();
+  float value2 = fuzzed_data.ConsumeIntegral<int>();
 
   std::string random_string = fuzzed_data.ConsumeRandomLengthString();
   char op = random_string[0];
