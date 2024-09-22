@@ -1,6 +1,6 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Verify changes with cifuzzer
+run-name: ${{ github.actor }} is fuzzing this shit
+on: [push, pull_request]
 jobs:
   fuzz:
     runs-on: ubuntu-latest
